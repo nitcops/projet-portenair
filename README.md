@@ -1,15 +1,21 @@
 # projet-portainer
 
-pour ce projet j'ai choisi podman car j'utilise une distribution rockylinux docker n'étant pas antif j'ai privilégié donc un outil natif de plus
+ici je vais vous présenter un petit projet ou j'installe un serveur web nginx de façon trés automatisé vous pouvez passer l'introduction et juste suivre les étape d'installation en commençant par les prérequis et en suivant la procédure même quelqu'un qui n'est pas du domaine pourrais effectuer cette tache tant elle est simplifié le principe de ce projet et donc de montré la simplification de l'installation et la gestion de ce serveur via l'automatisation de l'installation de ce serveur et d'une interface graphique pour ça gestion.
+
+Introduction :
+pour ce projet j'ai choisi podman car j'utilise une distribution rockylinux docker n'étant pas natif j'ai privilégié donc un outil natif de plus
 Podman permet le Rootless, mais pour ce lab technique, j'ai choisi le mode Root pour faciliter l'intégration de Portainer et la gestion des ports privilégiés (comme le port 80), tout en profitant de l'architecture sans démon qui diminue les risque de faire planté les conteneur car le processus parent étant plus haut dans le hiérarchie des pid la probabilité d'une panne diminue.
 
-# prot privlégié ce sont les 1024 premier port qui demande souvent d'être root
+# port privlégié ce sont les 1024 premier port qui demande souvent d'être root
 
 prérequis
 voici mon script de base à executé c'est simple et automatique vous avez jsute à copié coller dans un fichier vous pouvez même coller les commentaire il seront ignoré par le shell et ferais tous automatiquement l'installation des dépendance ainsi que les configuration de base.
 
-<img width="823" height="504" alt="image" src="https://github.com/user-attachments/assets/40bc145a-f3f2-4860-bd90-2668ba53de85" />
-
+vi setup.sh
+puis une fois que mon script est coller faite un échap :wq # une fois que vous appuyé sur échap vi entre en mode commande et vous verrez apparaitre en bas vos saisie ne paniqué si cela ne marche pas ou si vous avez fait une faut de frappe refaire échap puis : puis w puis q comme vu sur ma capture en bas puis appuyé sur entré
+<img width="812" height="513" alt="image" src="https://github.com/user-attachments/assets/87a0b25c-8610-42bf-a3b8-2499a2910f5c" />
+chmod +x setup.sh # commande pour rendre le script executable
+./setup.sh # commande pour executé le script
 
 
 
