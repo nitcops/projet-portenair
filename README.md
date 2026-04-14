@@ -46,13 +46,14 @@ Pour lancer l'infrastructure :
 Vérifiez d'abord votre adresse IP avec la commande ip -br a. Ensuite, lancez la commande suivante dans le dossier contenant le fichier YAML :
 podman-compose up -d
 
+
 <img width="812" height="508" alt="image" src="https://github.com/user-attachments/assets/788a65e8-af4c-4813-8719-6e3d812b6750" />
 
 une derniére commande 
 sentenforce 0
 ce n'est pas une bonne partique cela désactive selinux mais pour ce lab on va ce concentré sur la gestion de nos contenaire podman via portainer 
 
-
+Une fois terminé, vous pourrez accéder à l'interface de gestion via https://<VOTRE_IP>:9443.
 
 
 
