@@ -7,7 +7,7 @@ services:
       - "8080:80"  # Accès via http://IP-de-ton-Rocky:8080
 
   mon-portainer:
-    image: portainer/portainer-ce:latest
+    image: docker.io/portainer/portainer-ce:latest
     ports:
       - "9443:9443" # Accès via https://IP-de-ton-Rocky:9443
     volumes:
@@ -16,3 +16,4 @@ services:
 
 volumes:
   portainer_data:
+
