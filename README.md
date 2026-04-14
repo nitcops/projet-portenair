@@ -5,46 +5,24 @@ Podman permet le Rootless, mais pour ce lab technique, j'ai choisi le mode Root 
 
 # prot privlégié ce sont les 1024 premier port qui demande souvent d'être root
 
-voici mon script de base à executé c'est simple et automatique vous avez jsute à copié coller dans un fichier vous pouvez même coller les commentaire il seront ignoré par le shell et ferais tous automatiquement.
-#!/bin/bash
-dnf update
-dnf install curl && git
-firewall-cmd --zone=public --add-service=ssh --permanent
-firewall-cmd --zone=public --add-service=http --permanent
-firewall-cmd --zone=public --add-service=https --permanent
-# Ouvrir le port pour Nginx
-sudo firewall-cmd --add-port=8080/tcp --permanent
-# Ouvrir le port pour Portainer
-sudo firewall-cmd --add-port=9443/tcp --permanent
-firewall-cmd --reload
-dnf install podman
-# 1. Installer le dépôt EPEL (indispensable sur Rocky/RHEL)
-sudo dnf install epel-release -y
-# 2. Rafraîchir les dépôts
-sudo dnf makecache
-# 3. Installer podman-compose
-sudo dnf install podman-compose -y
-systemctl enable --now podman.socket
+prérequis
+voici mon script de base à executé c'est simple et automatique vous avez jsute à copié coller dans un fichier vous pouvez même coller les commentaire il seront ignoré par le shell et ferais tous automatiquement l'installation des dépendance ainsi que les configuration de base.
+<img width="823" height="504" alt="image" src="https://github.com/user-attachments/assets/40bc145a-f3f2-4860-bd90-2668ba53de85" />
 
-et voici mon script/fichier podman-compose ou plutôt docker-compose mais avec podman
-version: '3'
 
-services:
-  mon-nginx:
-    image: nginx:latest
-    ports:
-      - "8080:80"  # Accès via http://IP-de-ton-Rocky:8080
 
-  mon-portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - "9443:9443" # Accès via https://IP-de-ton-Rocky:9443
-    volumes:
-      - /run/podman/podman.sock:/var/run/docker.sock # Donne à Portainer l'accès à Podman
-      - portainer_data:/data
 
-volumes:
-  portainer_data:
+
+
+
+
+Je vais déclaré dans mon fichier Docker-compose.yml mon conteneur nginx et portainer pour cela je déclare dans mon service 2 conteneur un portenaire avec le port 9443 comme ça je pourrais y accéder via l'ip de ma machine 192.168.222.136 dans mon cas pour vous il faudra vérifier avec ip -br a votre ip principal je vais également déclaré un volume pour que portainer puisse tracker podman, ici vous avez juste à executé mon script dockercompose.yml pas la peine de vous embéter avec mes explication technique.
+<img width="816" height="506" alt="image" src="https://github.com/user-attachments/assets/8e49abeb-0ba4-4f45-b56b-e44a011ba7a4" />
+
+
+
+
+
 
 
 
