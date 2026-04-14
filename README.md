@@ -13,7 +13,7 @@ voici mon script de base à executé c'est simple et automatique vous avez jsute
 
 vi setup.sh
 puis une fois que mon script est coller faite un échap :wq # une fois que vous appuyé sur échap vi entre en mode commande et vous verrez apparaitre en bas vos saisie ne paniqué si cela ne marche pas ou si vous avez fait une faut de frappe refaire échap puis : puis w puis q comme vu sur ma capture en bas puis appuyé sur entré
-<img width="812" height="513" alt="image" src="https://github.com/user-attachments/assets/87a0b25c-8610-42bf-a3b8-2499a2910f5c" />
+<img width="820" height="514" alt="image" src="https://github.com/user-attachments/assets/8be057d6-5eb0-426c-8f93-edd7f2cb5069" />
 chmod +x setup.sh # commande pour rendre le script executable
 ./setup.sh # commande pour executé le script
 
