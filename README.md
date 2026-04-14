@@ -25,7 +25,8 @@ chmod +x setup.sh # commande pour rendre le script executable
 
 Je vais déclaré dans mon fichier Docker-compose.yml mon conteneur nginx et portainer pour cela je déclare dans mon service 2 conteneur un portenaire avec le port 9443 comme ça je pourrais y accéder via l'ip de ma machine 192.168.222.136 dans mon cas pour vous il faudra vérifier avec ip -br a votre ip principal je vais également déclaré un volume pour que portainer puisse tracker podman, ici vous avez juste à executé mon script dockercompose.yml pas la peine de vous embéter avec mes explication technique.
 
-<img width="816" height="506" alt="image" src="https://github.com/user-attachments/assets/8e49abeb-0ba4-4f45-b56b-e44a011ba7a4" />
+tapé podman-compose up -d
+<img width="812" height="508" alt="image" src="https://github.com/user-attachments/assets/788a65e8-af4c-4813-8719-6e3d812b6750" />
 
 
 
